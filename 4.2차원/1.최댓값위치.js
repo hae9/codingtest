@@ -9,7 +9,7 @@ function solution(nums) {
 }
 
 console.log(
-  solution1([
+  solution2([
     [3, 23, 85, 34, 17, 74, 25, 52, 65],
     [10, 7, 39, 42, 88, 52, 14, 72, 63],
     [87, 42, 18, 78, 53, 45, 18, 84, 53],
@@ -22,11 +22,25 @@ console.log(
   ])
 );
 
-function solution1(nums) {
+// function solution1(nums) {
+//   let max = 0;
+//   let answer = [];
+//   for (i = 0; i < nums.length; i++) {
+//     for (j = 0; j < nums.length; j++) {
+//       if (nums[i][j] > max) {
+//         max = nums[i][j];
+//         answer = [i + 1, j + 1];
+//       }
+//     }
+//   }
+//   return answer;
+// }
+
+function solution2(nums) {
   let max = 0;
-  let answer = [];
-  for (i = 0; i < nums.length; i++) {
-    for (j = 0; j < nums.length; j++) {
+  let answer = [0, 0];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {
       if (nums[i][j] > max) {
         max = nums[i][j];
         answer = [i + 1, j + 1];
